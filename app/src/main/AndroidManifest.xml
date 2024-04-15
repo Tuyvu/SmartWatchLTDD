@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/shopping"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShoppingApp">
+        <activity
+            android:name="com.example.smartwatch.SettingActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.smartwatch.HomeActivity" />
+        <activity
+            android:name="com.example.smartwatch.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.smartwatch.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.smartwatch.PurchasesActivity"
+            android:exported="true"
+            android:parentActivityName="com.example.smartwatch.HomeActivity" />
+        <activity
+            android:name="com.example.smartwatch.ProfileActivity"
+            android:exported="true"
+            android:parentActivityName="com.example.smartwatch.HomeActivity" />
+        <activity
+            android:name="com.example.smartwatch.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="com.example.smartwatch.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="com.example.smartwatch.ProductsCardActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.smartwatch.MainActivity" />
+        <activity
+            android:name="com.example.smartwatch.DisplayProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.smartwatch.MainActivity"
+            android:exported="true"
+            android:parentActivityName="com.example.smartwatch.HomeActivity" />
+    </application>
+
+</manifest>
